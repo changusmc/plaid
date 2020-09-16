@@ -25,7 +25,7 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
-import io.plaidapp.R
+import com.changusmc.android.samples.dynamicfeatures.ondemand.R
 import io.plaidapp.core.dagger.DataManagerModule
 import io.plaidapp.core.dagger.SourcesRepositoryModule
 import io.plaidapp.core.dagger.dribbble.DribbbleDataModule

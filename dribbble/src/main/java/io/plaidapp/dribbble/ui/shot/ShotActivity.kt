@@ -116,7 +116,7 @@ class ShotActivity : AppCompatActivity() {
 
         inject(shotId)
 
-        largeAvatarSize = resources.getDimensionPixelSize(io.plaidapp.R.dimen.large_avatar_size)
+        largeAvatarSize = resources.getDimensionPixelSize(com.changusmc.android.samples.dynamicfeatures.ondemand.R.dimen.large_avatar_size)
 
         binding.viewModel = viewModel.also { vm ->
             vm.openLink.observe(this, EventObserver { openLink(it) })
@@ -169,7 +169,7 @@ class ShotActivity : AppCompatActivity() {
             this,
             CustomTabsIntent.Builder()
                 .setToolbarColor(
-                    ContextCompat.getColor(this@ShotActivity, io.plaidapp.R.color.dribbble)
+                    ContextCompat.getColor(this@ShotActivity, com.changusmc.android.samples.dynamicfeatures.ondemand.R.color.dribbble)
                 )
                 .addDefaultShareMenuItem()
                 .build(),
@@ -192,12 +192,12 @@ class ShotActivity : AppCompatActivity() {
         // color the ripple on the image spacer (default is grey)
         binding.shotSpacer.background = ViewUtils.createRipple(
             palette, 0.25f, 0.5f,
-            ContextCompat.getColor(this@ShotActivity, io.plaidapp.R.color.mid_grey), true
+            ContextCompat.getColor(this@ShotActivity, com.changusmc.android.samples.dynamicfeatures.ondemand.R.color.mid_grey), true
         )
         // slightly more opaque ripple on the pinned image to compensate for the scrim
         binding.shot.foreground = ViewUtils.createRipple(
             palette, 0.3f, 0.6f,
-            ContextCompat.getColor(this@ShotActivity, io.plaidapp.R.color.mid_grey), true
+            ContextCompat.getColor(this@ShotActivity, com.changusmc.android.samples.dynamicfeatures.ondemand.R.color.mid_grey), true
         )
     }
 
@@ -211,7 +211,7 @@ class ShotActivity : AppCompatActivity() {
 
         if (!isDark) { // make back icon dark on light images
             binding.back.setColorFilter(
-                ContextCompat.getColor(this@ShotActivity, io.plaidapp.R.color.dark_icon)
+                ContextCompat.getColor(this@ShotActivity, com.changusmc.android.samples.dynamicfeatures.ondemand.R.color.dark_icon)
             )
         }
 

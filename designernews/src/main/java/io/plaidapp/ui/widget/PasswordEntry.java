@@ -142,9 +142,9 @@ public class PasswordEntry extends TextInputEditText {
             maskDiameter = maskBounds.height();
             maskCenterY = (maskBounds.top + maskBounds.bottom) / 2f;
             showPasswordDuration =
-                    context.getResources().getInteger(io.plaidapp.R.integer.show_password_duration);
+                    context.getResources().getInteger(com.changusmc.android.samples.dynamicfeatures.ondemand.R.integer.show_password_duration);
             hidePasswordDuration =
-                    context.getResources().getInteger(io.plaidapp.R.integer.hide_password_duration);
+                    context.getResources().getInteger(com.changusmc.android.samples.dynamicfeatures.ondemand.R.integer.hide_password_duration);
             fastOutSlowIn = AnimUtils.getFastOutSlowInInterpolator(context);
         }
 

@@ -31,7 +31,7 @@ import io.plaidapp.core.designernews.data.votes.UpvoteStoryService
  * Helpers to start activities in a modularized world.
  */
 
-private const val PACKAGE_NAME = "io.plaidapp"
+private const val PACKAGE_NAME = "com.changusmc.android.samples.dynamicfeatures.ondemand"
 
 /**
  * Create an Intent with [Intent.ACTION_VIEW] to an [AddressableActivity].

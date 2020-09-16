@@ -20,7 +20,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import io.plaidapp.R
+import com.changusmc.android.samples.dynamicfeatures.ondemand.R
 import io.plaidapp.core.data.CoroutinesDispatcherProvider
 import io.plaidapp.core.data.Result
 import io.plaidapp.core.designernews.data.login.LoginRepository

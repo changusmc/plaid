@@ -153,7 +153,7 @@ public class StoryActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         commentsList.setLayoutManager(layoutManager);
         commentsList.setItemAnimator(new CommentAnimator(
-                getResources().getInteger(io.plaidapp.R.integer.comment_expand_collapse_duration)));
+                getResources().getInteger(com.changusmc.android.samples.dynamicfeatures.ondemand.R.integer.comment_expand_collapse_duration)));
         header = getLayoutInflater().inflate(
                 R.layout.designer_news_story_description, commentsList, false);
         bindDescription();
@@ -242,9 +242,9 @@ public class StoryActivity extends AppCompatActivity {
         toolbarBackground = findViewById(R.id.story_title_background);
         background = findViewById(R.id.background);
         Resources res = getResources();
-        fabExpandDuration = res.getInteger(io.plaidapp.R.integer.fab_expand_duration);
-        threadWidth = res.getDimensionPixelSize(io.plaidapp.R.dimen.comment_thread_width);
-        threadGap = res.getDimensionPixelSize(io.plaidapp.R.dimen.comment_thread_gap);
+        fabExpandDuration = res.getInteger(com.changusmc.android.samples.dynamicfeatures.ondemand.R.integer.fab_expand_duration);
+        threadWidth = res.getDimensionPixelSize(com.changusmc.android.samples.dynamicfeatures.ondemand.R.dimen.comment_thread_width);
+        threadGap = res.getDimensionPixelSize(com.changusmc.android.samples.dynamicfeatures.ondemand.R.dimen.comment_thread_gap);
     }
 
     @Override
@@ -409,8 +409,8 @@ public class StoryActivity extends AppCompatActivity {
                             .customTabIntent(StoryActivity.this, story,
                                     customTab.getSession())
                             .setStartAnimations(getApplicationContext(),
-                                    io.plaidapp.R.anim.chrome_custom_tab_enter,
-                                    io.plaidapp.R.anim.fade_out_rapidly)
+                                    com.changusmc.android.samples.dynamicfeatures.ondemand.R.anim.chrome_custom_tab_enter,
+                                    com.changusmc.android.samples.dynamicfeatures.ondemand.R.anim.fade_out_rapidly)
                             .build(),
                     Uri.parse(story.getUrl()));
         }
@@ -446,8 +446,8 @@ public class StoryActivity extends AppCompatActivity {
         // animate from the FAB colour to the placeholder background color
         Animator background = ObjectAnimator.ofArgb(fabExpand,
                 ViewUtils.BACKGROUND_COLOR,
-                ContextCompat.getColor(this, io.plaidapp.R.color.designer_news),
-                ContextCompat.getColor(this, io.plaidapp.R.color.background_light))
+                ContextCompat.getColor(this, com.changusmc.android.samples.dynamicfeatures.ondemand.R.color.designer_news),
+                ContextCompat.getColor(this, com.changusmc.android.samples.dynamicfeatures.ondemand.R.color.background_light))
                 .setDuration(fabExpandDuration);
 
         // fade out the fab (rapidly)
@@ -468,7 +468,7 @@ public class StoryActivity extends AppCompatActivity {
             ColorStateList linksColor = ContextCompat.getColorStateList(this,
                     R.color.designer_news_links);
             int highlightColor = ContextCompat.getColor(this,
-                    io.plaidapp.R.color.designer_news_link_highlight);
+                    com.changusmc.android.samples.dynamicfeatures.ondemand.R.color.designer_news_link_highlight);
 
             CharSequence text = HtmlUtils.parseMarkdownAndPlainLinks(story.getComment(), markdown,
                     linksColor, highlightColor,
@@ -509,7 +509,7 @@ public class StoryActivity extends AppCompatActivity {
             GlideApp.with(this)
                     .load(story.getUserPortraitUrl())
                     .transition(withCrossFade())
-                    .placeholder(io.plaidapp.R.drawable.avatar_placeholder)
+                    .placeholder(com.changusmc.android.samples.dynamicfeatures.ondemand.R.drawable.avatar_placeholder)
                     .circleCrop()
                     .into(avatar);
         } else {
@@ -519,13 +519,13 @@ public class StoryActivity extends AppCompatActivity {
 
     private void setVoteCountText(TextView upvoteStory, Integer voteCount) {
         upvoteStory.setText(getResources().getQuantityString(
-                io.plaidapp.R.plurals.upvotes, voteCount,
+                com.changusmc.android.samples.dynamicfeatures.ondemand.R.plurals.upvotes, voteCount,
                 NumberFormat.getInstance().format(voteCount)));
     }
 
     private CharSequence getStoryPosterTimeText(String userDisplayName, String userJob, Date createdAt) {
         SpannableString poster = new SpannableString(userDisplayName.toLowerCase());
-        poster.setSpan(new TextAppearanceSpan(this, io.plaidapp.R.style
+        poster.setSpan(new TextAppearanceSpan(this, com.changusmc.android.samples.dynamicfeatures.ondemand.R.style
                         .TextAppearance_CommentAuthor),
                 0, poster.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         CharSequence job = !TextUtils.isEmpty(userJob) ? "\n" + userJob.toLowerCase() : "";
@@ -594,7 +594,7 @@ public class StoryActivity extends AppCompatActivity {
                 triggeringView.getHeight() / 2);
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
                 StoryActivity.this,
-                triggeringView, getString(io.plaidapp.R.string.transition_designer_news_login));
+                triggeringView, getString(com.changusmc.android.samples.dynamicfeatures.ondemand.R.string.transition_designer_news_login));
 
         ActivityCompat.startActivityForResult(this, login, requestCode, options.toBundle());
     }
@@ -814,7 +814,7 @@ public class StoryActivity extends AppCompatActivity {
                 ColorStateList linksColor = ContextCompat.getColorStateList(getApplicationContext(),
                         R.color.designer_news_links);
                 int highlightColor = ContextCompat.getColor(getApplicationContext(),
-                        io.plaidapp.R.color.designer_news_link_highlight);
+                        com.changusmc.android.samples.dynamicfeatures.ondemand.R.color.designer_news_link_highlight);
 
                 CharSequence commentText = HtmlUtils.parseMarkdownAndPlainLinks(
                         comment.getBody(),

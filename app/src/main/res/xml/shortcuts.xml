@@ -26,7 +26,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetClass="io.plaidapp.search.ui.SearchActivity"
-            android:targetPackage="io.plaidapp" />
+            android:targetPackage="com.changusmc.android.samples.dynamicfeatures.ondemand" />
     </shortcut>
 
 </shortcuts>

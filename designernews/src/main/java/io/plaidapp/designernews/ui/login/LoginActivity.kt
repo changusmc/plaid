@@ -29,7 +29,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
 import androidx.lifecycle.Observer
 import com.google.android.material.snackbar.Snackbar
-import io.plaidapp.R as appR
+import com.changusmc.android.samples.dynamicfeatures.ondemand.R as appR
 import io.plaidapp.core.R as coreR
 import io.plaidapp.core.ui.transitions.FabTransform
 import io.plaidapp.core.ui.transitions.MorphTransform

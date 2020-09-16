@@ -27,7 +27,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.Keep
 import androidx.core.content.withStyledAttributes
-import io.plaidapp.R
+import com.changusmc.android.samples.dynamicfeatures.ondemand.R
 import io.plaidapp.core.util.TransitionUtils
 
 /**

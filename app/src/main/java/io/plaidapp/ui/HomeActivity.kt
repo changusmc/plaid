@@ -57,7 +57,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.integration.recyclerview.RecyclerViewPreloader
 import com.bumptech.glide.util.ViewPreloadSizeProvider
-import io.plaidapp.R
+import com.changusmc.android.samples.dynamicfeatures.ondemand.R
 import io.plaidapp.core.dagger.qualifier.IsPocketInstalled
 import io.plaidapp.core.data.prefs.SourcesRepository
 import io.plaidapp.core.dribbble.data.api.model.Shot

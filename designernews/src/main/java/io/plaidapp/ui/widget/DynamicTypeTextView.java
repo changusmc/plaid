@@ -21,7 +21,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 
-import io.plaidapp.R;
+import com.changusmc.android.samples.dynamicfeatures.ondemand.R;
 import io.plaidapp.core.ui.widget.BaselineGridTextView;
 import io.plaidapp.core.util.ViewUtils;
 

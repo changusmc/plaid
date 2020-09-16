@@ -21,7 +21,7 @@ import androidx.core.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.View;
 
-import io.plaidapp.R;
+import com.changusmc.android.samples.dynamicfeatures.ondemand.R;
 
 /**
  * A view which supports a minimum vertical offset (i.e. translation Y) and has a custom pinned

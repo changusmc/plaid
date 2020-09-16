@@ -141,7 +141,7 @@ public class StretchyChangeBounds extends Transition {
         Interpolator fastOutSlowInInterpolator =
                 AnimUtils.getFastOutSlowInInterpolator(sceneRoot.getContext());
         Interpolator slowOutFastInInterpolator = AnimationUtils.loadInterpolator(
-                sceneRoot.getContext(), io.plaidapp.R.interpolator.slow_out_fast_in);
+                sceneRoot.getContext(), com.changusmc.android.samples.dynamicfeatures.ondemand.R.interpolator.slow_out_fast_in);
         AnimatorSet transition = new AnimatorSet();
         long trailingDuration =
                 calculateTrailingDuration(startBounds, endBounds, sceneRoot.getContext());

@@ -84,9 +84,9 @@ public class MorphDialogToFab extends ChangeBounds {
             return;
         }
         transitionValues.values.put(PROPERTY_COLOR,
-                ContextCompat.getColor(view.getContext(), io.plaidapp.R.color.background_light));
+                ContextCompat.getColor(view.getContext(), com.changusmc.android.samples.dynamicfeatures.ondemand.R.color.background_light));
         transitionValues.values.put(PROPERTY_CORNER_RADIUS, view.getResources()
-                .getDimensionPixelSize(io.plaidapp.R.dimen.dialog_corners));
+                .getDimensionPixelSize(com.changusmc.android.samples.dynamicfeatures.ondemand.R.dimen.dialog_corners));
     }
 
     @Override

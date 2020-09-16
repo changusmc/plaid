@@ -23,7 +23,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
-import io.plaidapp.R as appR
+import com.changusmc.android.samples.dynamicfeatures.ondemand.R as appR
 import io.plaidapp.about.R
 import io.plaidapp.about.domain.model.Library
 import io.plaidapp.core.util.glide.GlideApp

@@ -56,7 +56,7 @@ buildscript { scriptHandler ->
             'viewPager2'         : '1.0.0'
     ]
     ext.names = [
-            'applicationId': 'io.plaidapp'
+            'applicationId': 'com.changusmc.android.samples.dynamicfeatures.ondemand'
     ]
 
     dependencies {
@@ -69,12 +69,6 @@ buildscript { scriptHandler ->
 
 plugins {
     id 'com.diffplug.gradle.spotless' version '3.26.1'
-}
-
-ext {
-    // query git for the commit count to automate versioning.
-    gitCommitCount = 100 +
-            Integer.parseInt('git rev-list --count HEAD'.execute([], project.rootDir).text.trim())
 }
 
 subprojects {

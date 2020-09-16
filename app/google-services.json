@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:575982651947:android:e41f681f54e65271",
         "android_client_info": {
-          "package_name": "io.plaidapp"
+          "package_name": "com.changusmc.android.samples.dynamicfeatures.ondemand"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "575982651947-g8ab25j87qfv4cjdc0l2avg41fngkcf8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "io.plaidapp",
+            "package_name": "com.changusmc.android.samples.dynamicfeatures.ondemand",
             "certificate_hash": "efa9845bc1e2d2474ccd2c022f4df4dd5a33347b"
           }
         },

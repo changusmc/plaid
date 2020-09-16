@@ -23,7 +23,7 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
-import io.plaidapp.R
+import com.changusmc.android.samples.dynamicfeatures.ondemand.R
 import io.plaidapp.core.dagger.qualifier.IsPocketInstalled
 import io.plaidapp.core.dagger.scope.FeatureScope
 import io.plaidapp.core.data.pocket.PocketUtils

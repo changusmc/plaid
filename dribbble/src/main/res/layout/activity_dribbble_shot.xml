@@ -29,7 +29,7 @@
 
         <import type="io.plaidapp.dribbble.R" />
 
-        <import type="io.plaidapp.R" alias="appR" />
+        <import type="com.changusmc.android.samples.dynamicfeatures.ondemand.R" alias="appR" />
 
         <variable
             name="viewModel"
