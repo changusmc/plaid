@@ -2,13 +2,15 @@ steps:
   - label: "Test"
     command: "./gradlew testDebugUnitTest"
     branches: "master"
-    artifact_paths: "**/*.xml, **/*.log"
+    artifact_paths: 
+      - "build/**/*.xml"
+      - "build/**/*.log"
   - label: "Build Debug"
     command: "./gradlew :app:assembleDebug"
-    artifact_paths: "**/*.apk, **/*.log"
+    artifact_paths: "app/**/*.apk"
     branches: "master"
   - label: "Build Release"
     command: "./gradlew :app:assembleRelease"
-    artifact_paths: "**/*.apk, **/*.log"
+    artifact_paths: "app/**/*.apk"
     branches: "master"
       
