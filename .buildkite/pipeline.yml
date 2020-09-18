@@ -1,14 +1,10 @@
 steps:
-
-  - command: ./gradlew testDebugUnitTest
-    parallelism: 3
+  - label: "Test"
+    command: "./gradlew testDebugUnitTest"
     branches: "master"
-    artifact_paths: "tmp/junit-*.xml"
-  - wait: ~
-    continue_on_failure: true
-  - plugins:
-      - junit-annotate#v1.8.0:
-          artifacts: "tmp/junit-*.xml"
+    artifact_paths: 
+      - "app/**/*.xml"
+      - "app/**/*.log"
   - label: "Build Debug"
     command: "./gradlew :app:assembleDebug"
     artifact_paths: "app/**/*.apk"
