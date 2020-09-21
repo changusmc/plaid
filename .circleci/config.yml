@@ -1,13 +1,20 @@
 version: 2.1
 
+executors:
+  android-executor:
+    docker:
+      - image: circleci/android:api-29-node
+    environment:
+      JAVA_TOOL_OPTIONS: "-Xmx3200m"
+      GRADLE_OPTS: -Dkotlin.compiler.execution.strategy=in-process  
+
 orbs:
-  android: circleci/android@sha256:b6646fdf7457f61825526e7bfce364d8e533da6ceb1cdb98e371e94348ecc834
-  run-with-retry: kimh/run-with-retry@1.0.0
+  run-with-retry: kimh/run-with-retry@1.0.0    
 
 jobs:
   build:
-    executor: android/android
-        
+    executor: android-executor
+            
     steps:
       - checkout
       - run-with-retry/run-with-retry:
