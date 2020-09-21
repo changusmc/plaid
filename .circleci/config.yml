@@ -10,5 +10,5 @@ jobs:
         
     steps:
       - checkout
-      - run-with-retry:
+      - run-with-retry/run-with-retry:
           command: ./gradlew assembleDebug
