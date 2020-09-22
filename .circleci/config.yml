@@ -12,10 +12,20 @@ orbs:
   run-with-retry: kimh/run-with-retry@1.0.0    
 
 jobs:
-  build:
+  assemble_debug:
     executor: android-executor
             
     steps:
       - checkout
       - run-with-retry/run-with-retry:
+          name: Assemble Debug
           command: ./gradlew assembleDebug
+  assemble_release:
+    executor: android-executor
+            
+    steps:
+      - checkout
+      - run-with-retry/run-with-retry:
+          name: Assemble Release
+          command: ./gradlew assembleRelease
+  
