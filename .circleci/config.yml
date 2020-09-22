@@ -9,7 +9,14 @@ executors:
       GRADLE_OPTS: -Dkotlin.compiler.execution.strategy=in-process  
 
 orbs:
-  run-with-retry: kimh/run-with-retry@1.0.0    
+  run-with-retry: kimh/run-with-retry@1.0.0 
+  
+workflows:
+  version: 2
+  build:
+    jobs:
+        - assemble_debug
+        - assemble_release     
 
 jobs:
   assemble_debug:
@@ -17,15 +24,15 @@ jobs:
             
     steps:
       - checkout
-      - run-with-retry/run-with-retry:
+      - run:
           name: Assemble Debug
           command: ./gradlew assembleDebug
+
   assemble_release:
     executor: android-executor
             
     steps:
       - checkout
-      - run-with-retry/run-with-retry:
+      - run:
           name: Assemble Release
           command: ./gradlew assembleRelease
-  
