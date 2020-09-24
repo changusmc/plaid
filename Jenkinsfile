@@ -1,6 +1,6 @@
 node {      
     stage('Preparation') { 
-        git credentialsId: '3ab81c0f-a1b4-4fac-8a19-300b1b1ea30a', url: 'git@github.com:changusmc/plaid.git'
+        checkout scm
     }
     
     stage('Dependencies') {
