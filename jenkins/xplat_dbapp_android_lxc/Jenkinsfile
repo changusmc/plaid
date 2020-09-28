@@ -1,9 +1,21 @@
-node {      
-    stage('Preparation') { 
-        checkout scm
+pipeline {      
+    agent any
+    parameters { 
+        booleanParam(name: 'SHOULD_RELEASE', defaultValue: false, description: 'Should we release this build?')
     }
-    
-    stage('Build') {
-        sh "echo xplat_dbapp_android_lxc"
+
+    stages {
+        stage('Preparation') { 
+            steps {
+                checkout scm
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo "xplat_dbapp_android_lxc"
+                echo "Release this build? ${params.SHOULD_RELEASE}"
+            }
+        }
     }
 }
