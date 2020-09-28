@@ -13,4 +13,5 @@ steps:
     command: "./gradlew :app:assembleRelease"
     artifact_paths: "app/**/*.apk"
     branches: "master"
-  - wait: ~
+  - label: Trigger another pipeline
+    trigger: hypershard-android
