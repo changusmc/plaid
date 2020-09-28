@@ -3,7 +3,7 @@ node {
         checkout scm
     }
     
-    stage('Dependencies') {
-        sh "ls"
+    stage('Build') {
+        sh "echo xplat_dbapp_android_lxc"
     }
 }
