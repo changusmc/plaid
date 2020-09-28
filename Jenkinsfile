@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     triggers {
-        // Enabling being build on Push
         pollSCM('') 
     }
     
