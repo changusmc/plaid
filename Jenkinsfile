@@ -1,28 +1,40 @@
-node {      
-    stage('Preparation') { 
-        checkout scm
-    }
+pipeline {
+    agent any
     
-    stage('Dependencies') {
-        sh "ls"
-    }
-
-    stage ('Build xplat_dbapp_android_lxc') {
-        when { 
-            anyOf {
-                changeset "jenkins/xplat_dbapp_android_lxc/**"
+    stages {
+        stage('Preparation') { 
+            steps {
+                checkout scm
+            }
+        }
+        
+        stage('Dependencies') {
+            steps {
+                sh "ls"
             }
         }
 
-        build job: 'xplat_dbapp_android_lxc'
-    }
-
-    stage ('Build xplat_dbapp_ios_buck_unittest') {
-        when { 
-            anyOf {
-                changeset "jenkins/xplat_dbapp_ios_buck_unittest/**"
+        stage ('Build xplat_dbapp_android_lxc') {
+            when { 
+                anyOf {
+                    changeset "jenkins/xplat_dbapp_android_lxc/**"
+                }
             }
-        }        
-        build job: 'xplat_dbapp_ios_buck_unittest'
+
+            steps {
+                build job: 'xplat_dbapp_android_lxc'
+            }
+        }
+
+        stage ('Build xplat_dbapp_ios_buck_unittest') {
+            when { 
+                anyOf {
+                    changeset "jenkins/xplat_dbapp_ios_buck_unittest/**"
+                }
+            }        
+            steps {
+                build job: 'xplat_dbapp_ios_buck_unittest'
+            }
+        }
     }
 }
