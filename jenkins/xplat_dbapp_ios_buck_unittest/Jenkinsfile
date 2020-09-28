@@ -1,0 +1,9 @@
+node {      
+    stage('Preparation') { 
+        checkout scm
+    }
+    
+    stage('Build') {
+        sh "echo xplat_dbapp_ios_buck_unittest"
+    }
+}
