@@ -6,7 +6,11 @@ node {
     stage('Dependencies') {
         sh "ls"
     }
-    
+
+    stage ('Invoke_pipelineA') {
+        build job: 'Scripts Pipeline'
+    }
+
     stage('Clean Build') {
         sh "pwd"
         sh 'ls -al'
