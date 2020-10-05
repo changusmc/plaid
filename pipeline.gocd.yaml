@@ -5,6 +5,8 @@ pipelines:
     label_template: ${COUNT}
     lock_behavior: none
     display_order: -1
+    parameters: # list of parameters that can be configured for a pipeline
+          param1: value1    
     materials:
       git-1af7f19:
         git: git@github.com:changusmc/plaid.git
@@ -21,6 +23,7 @@ pipelines:
           allow_only_on_success: false
         jobs:
           build_debug:
+          
             timeout: 0
             tasks:
             - exec:
