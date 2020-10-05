@@ -1,0 +1,38 @@
+format_version: 10
+pipelines:
+  build_and_test:
+    group: My-Pipelines
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git-1af7f19:
+        git: git@github.com:changusmc/plaid.git
+        shallow_clone: false
+        auto_update: true
+        branch: master
+    stages:
+    - build:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          build_debug:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - assembleDebug
+                command: ./gradlew
+                run_if: passed
+          build_release:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - assembleRelease
+                command: ./gradlew
+                run_if: passed        
